@@ -4,13 +4,14 @@
 #include "stdafx.h"
 #include "SimpleList.h"
 #include "../StringCls/AString.h"
+#include "../StringCls/AString.cpp"
 #include "DoubleList.h"
 
 using namespace cppalgo;
 
 template SimpleList<int>;
-//template SimpleList<String>;
-//template DoubleList<int>;
+template SimpleList<String>;
+template DoubleList<int>;
 
 class Person
 {

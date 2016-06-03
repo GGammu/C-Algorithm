@@ -62,7 +62,7 @@ namespace cppalgo {
 		void _clear();
 	};
 
-	template <class TYPE> void SimpleList<TYPE>::_init()
+	template <class TYPE> inline void SimpleList<TYPE>::_init()
 	{
 		m_pNodeHead = new Node;
 		m_pNodeTail = new Node;
@@ -73,7 +73,7 @@ namespace cppalgo {
 		m_nCount = 0;
 	}
 
-	template <class TYPE> void SimpleList<TYPE>::_clear()
+	template <class TYPE> inline void SimpleList<TYPE>::_clear()
 	{
 		RemoveAll();
 
@@ -87,7 +87,7 @@ namespace cppalgo {
 		m_nCount = 0;
 	}
 
-	template <class TYPE> TYPE SimpleList<TYPE>::DeleteNext(POS pos)
+	template <class TYPE> inline TYPE SimpleList<TYPE>::DeleteNext(POS pos)
 	{
 		Node *pNode = (Node*)pos;
 
@@ -107,7 +107,7 @@ namespace cppalgo {
 		return rt;
 	}
 
-	template <class TYPE> POS SimpleList<TYPE>::InsertNext(POS pos, const TYPE& newElem)
+	template <class TYPE> inline POS SimpleList<TYPE>::InsertNext(POS pos, const TYPE& newElem)
 	{
 		Node *pNode = (Node*)pos;
 
@@ -126,7 +126,7 @@ namespace cppalgo {
 		return pNewNode;
 	}
 
-	template <class TYPE> TYPE& SimpleList<TYPE>::GetHead()
+	template <class TYPE> inline TYPE& SimpleList<TYPE>::GetHead()
 	{
 		if (m_nCount > 0)
 			return m_pNodeHead->pNext->data;
@@ -134,7 +134,7 @@ namespace cppalgo {
 			throw EMPTY_LIST;
 	}
 
-	template <class TYPE> TYPE SimpleList<TYPE>::GetHead() const
+	template <class TYPE> inline TYPE SimpleList<TYPE>::GetHead() const
 	{
 		if (m_nCount > 0)
 			return m_pNodeHead->pNext->data;
@@ -142,7 +142,7 @@ namespace cppalgo {
 			throw EMPTY_LIST;
 	}
 
-	template <class TYPE> TYPE& SimpleList<TYPE>::GetNext(POS& pos)
+	template <class TYPE> inline TYPE& SimpleList<TYPE>::GetNext(POS& pos)
 	{
 		if (!IsValid(pos))
 			throw INVALID_POS;
@@ -157,7 +157,7 @@ namespace cppalgo {
 		return pNode->data;
 	}
 
-	template <class TYPE> TYPE SimpleList<TYPE>::GetNext(POS& pos) const
+	template <class TYPE> inline TYPE SimpleList<TYPE>::GetNext(POS& pos) const
 	{
 		if (!IsValid(pos))
 			throw INVALID_POS;
@@ -172,14 +172,14 @@ namespace cppalgo {
 		return pNode->data;
 	}
 
-	template <class TYPE> void SimpleList<TYPE>::RemoveAll()
+	template <class TYPE> inline void SimpleList<TYPE>::RemoveAll()
 	{
 		int n = GetCount();
 		for (int i = 0; i < n; i++)
 			RemoveHead();
 	}
 
-	template <class TYPE> TYPE& SimpleList<TYPE>::GetAt(POS pos)
+	template <class TYPE> inline TYPE& SimpleList<TYPE>::GetAt(POS pos)
 	{
 		if (IsValid(pos))
 			return ((Node*)pos)->data;
@@ -187,7 +187,7 @@ namespace cppalgo {
 			throw INVALID_POS;
 	}
 
-	template <class TYPE> TYPE SimpleList<TYPE>::GetAt(POS pos) const
+	template <class TYPE> inline TYPE SimpleList<TYPE>::GetAt(POS pos) const
 	{
 		if (IsValid(pos))
 			return ((Node*)pos)->data;
@@ -195,7 +195,7 @@ namespace cppalgo {
 			throw INVALID_POS;
 	}
 
-	template <class TYPE> void SimpleList<TYPE>::SetAt(POS pos, const TYPE& newElement)
+	template <class TYPE> inline void SimpleList<TYPE>::SetAt(POS pos, const TYPE& newElement)
 	{
 		if (IsValid(pos))
 			((Node*)pos)->data = newElement;
@@ -203,7 +203,7 @@ namespace cppalgo {
 			throw INVALID_POS;
 	}
 
-	template <class TYPE> POS SimpleList<TYPE>::Find(const TYPE& searchval, POS startAfter) const
+	template <class TYPE> inline POS SimpleList<TYPE>::Find(const TYPE& searchval, POS startAfter) const
 	{
 		POS pos;
 		if (!IsValid(startAfter))
@@ -222,7 +222,7 @@ namespace cppalgo {
 		return pos;
 	}
 
-	template <class TYPE> POS SimpleList<TYPE>::FindIndex(int nIndex) const
+	template <class TYPE> inline POS SimpleList<TYPE>::FindIndex(int nIndex) const
 	{
 		if (nIndex >= GetCount())
 			return 0;
