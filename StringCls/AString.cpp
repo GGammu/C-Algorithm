@@ -1,11 +1,14 @@
 #include "stdafx.h"
+#include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
 #include "AString.h"
-#include "stdarg.h"
-#include "string.h"
 
 #ifndef min
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #endif
+
+#pragma warning(disable:4996)
 
 using namespace cppalgo;
 
@@ -27,7 +30,7 @@ void String::_copy(const char* lpsz)
 		m_pBuffer = new char[len + 1];
 		if (m_pBuffer) 
 		{
-			strcpy_s(m_pBuffer, len+1, lpsz);
+			strcpy(m_pBuffer, lpsz);
 		}
 	}
 }
@@ -153,10 +156,10 @@ void String::Concat(const String& str) {
 	ptemp[0] = 0;
 
 	if (!IsEmpty())
-		strcpy_s(ptemp, len, m_pBuffer);
+		strcpy(ptemp, m_pBuffer);
 
 	if (!str.IsEmpty())
-		strcpy_s(ptemp, len, str.m_pBuffer);
+		strcat(ptemp, str.m_pBuffer);
 
 	_clear();
 	m_pBuffer = ptemp;
