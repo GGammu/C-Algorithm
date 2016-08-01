@@ -133,9 +133,35 @@ long Calculator::CalcPostfix(const String & strPostfix)
 			} while (c >= '0' && c <= '9');
 			stack.Push(n);
 		}
+		else if (c == '+')
+		{
+			stack.Push(stack.Pop() + stack.Pop());
+			i++;
+		}
+		else if (c == '-')
+		{
+			n = stack.Pop();
+			stack.Push(stack.Pop() - n);
+			i++;
+		}
+		else if (c == '*')
+		{
+			stack.Push(stack.Pop() * stack.Pop());
+			i++;
+		}
+		else if (c == '/')
+		{
+			n = stack.Pop();
+			stack.Push(stack.Pop() / n);
+			i++;
+		}
+		else
+		{
+			i++;
+		}
 	}
 
-	return 0;
+	return stack.Pop();
 }
 
 long Calculator::CalcInfix(const String & strInfix)
