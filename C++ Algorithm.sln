@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gcd", "gcd\gcd.vcxproj", "{3C8B8E01-BC08-468C-BC50-CD4F5577FE2E}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calc", "Calc\Calc.vcxproj", "{88F34A14-C905-41F1-B042-AD0A981F8A50}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TreeTest", "TreeTest\TreeTest.vcxproj", "{6E251197-179B-4C1B-9117-F6B6A070F568}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.2.Fibonacci", "8.2.Fibonacci\8.2.Fibonacci.vcxproj", "{64DF5959-AF02-438C-A128-162F76AD14B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,14 @@ Global
 		{6E251197-179B-4C1B-9117-F6B6A070F568}.Release|x64.Build.0 = Release|x64
 		{6E251197-179B-4C1B-9117-F6B6A070F568}.Release|x86.ActiveCfg = Release|Win32
 		{6E251197-179B-4C1B-9117-F6B6A070F568}.Release|x86.Build.0 = Release|Win32
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Debug|x64.ActiveCfg = Debug|x64
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Debug|x64.Build.0 = Debug|x64
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Debug|x86.ActiveCfg = Debug|Win32
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Debug|x86.Build.0 = Debug|Win32
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Release|x64.ActiveCfg = Release|x64
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Release|x64.Build.0 = Release|x64
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Release|x86.ActiveCfg = Release|Win32
+		{64DF5959-AF02-438C-A128-162F76AD14B4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
