@@ -6,7 +6,7 @@ namespace cppalgo
     public:
         Fibonacci();
         ~Fibonacci();
-
-
+        int fibonacci(int n);
+        int fibonacci_nr(int n);
     };
 };

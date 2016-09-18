@@ -8,7 +8,9 @@ using namespace cppalgo;
 
 int main()
 {
-    printf("%d\n", fibonacci(10));
+    Fibonacci fi;
+
+    printf("%d\n", fi.fibonacci(10));
 
     char a;
     a = getchar();
